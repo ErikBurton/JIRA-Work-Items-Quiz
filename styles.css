@@ -19,13 +19,24 @@ body {
     padding: 20px;
   }
   
-  #question {
-    font-size: 18px;
-    margin-bottom: 20px;
+  #userNameInput {
+    display: block;
+    width: auto;
+    margin: 0 auto 10px auto; /* Center the input box vertically and horizontally */
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
   }
   
-  #userNameInput {
-    margin-bottom: 10px;
+  #startButton {
+    display: block;
+    margin: 10px auto; /* Center the button horizontally */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
   }
   
   .option {
@@ -37,6 +48,11 @@ body {
     border-radius: 5px;
     background-color: #f9f9f9;
     cursor: pointer;
+  }
+  
+  #question {
+    font-size: 18px;
+    margin-bottom: 20px;
   }
   
   #result {
@@ -59,14 +75,23 @@ body {
     color: #fff;
     cursor: pointer;
   }
-  
-  #startButton {
-    margin-top: 10px;
-    padding: 10px 20px;
-    border: none;
+
+  .correct-answer {
+    padding: 10px;
+    border: 2px solid #28a745; /* Green color */
     border-radius: 5px;
-    background-color: #007bff;
-    color: #fff;
-    cursor: pointer;
+    background-color: #d4edda; /* Light green background */
+    color: #155724; /* Dark green text */
+    margin-bottom: 10px;
   }
+  
+  .wrong-answer {
+    padding: 10px;
+    border: 2px solid #dc3545; /* Red color */
+    border-radius: 5px;
+    background-color: #f8d7da; /* Light red background */
+    color: #721c24; /* Dark red text */
+    margin-bottom: 10px;
+  }
+  
   

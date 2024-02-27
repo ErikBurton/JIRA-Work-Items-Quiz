@@ -75,7 +75,7 @@ const questions = [
     } else {
       endQuiz();
     }
-  }
+  } 
   
   function endQuiz() {
     if (score > highestScore) {
