@@ -84,14 +84,33 @@ const questions = [
       endQuiz();
     }
   }
-  
+
   function endQuiz() {
+    if (score > highestScore) {
+      highestScore = score;
+      highestScoreElement.textContent = "Highest Score: " + highestScore;
+    }
+    userScores.push({ name: userName, score });
+    userScores.sort((a, b) => b.score - a.score);
+    if (userScores.length > 10) {
+      userScores.pop();
+    }
+    localStorage.setItem('userScores', JSON.stringify(userScores));
+    showTopScores(); // Display top 10 highest scores
     questionElement.textContent = "Quiz Completed!";
     optionsElement.innerHTML = '';
     resultElement.textContent = '';
     scoreElement.textContent = "Final Score: " + score;
-    // Additional actions at the end of the quiz (if any)
+    nextButton.style.display = 'none'; // Hide the next button
   }
+  
+//   function endQuiz() {
+//     questionElement.textContent = "Quiz Completed!";
+//     optionsElement.innerHTML = '';
+//     resultElement.textContent = '';
+//     scoreElement.textContent = "Final Score: " + score;
+//     // Additional actions at the end of the quiz (if any)
+//   }
   
   function startQuiz() {
     currentQuestionIndex = 0;
