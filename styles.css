@@ -1,5 +1,6 @@
 body {
     font-family: Arial, sans-serif;
+    text-align: center;
   }
   
   .container {
@@ -9,7 +10,7 @@ body {
   }
   
   h1 {
-    text-align: center;
+    font-size: 24px;
   }
   
   #quiz {
@@ -20,27 +21,21 @@ body {
   
   #question {
     font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  #userNameInput {
+    margin-bottom: 10px;
   }
   
   .option {
     display: block;
     width: 100%;
-    margin: 10px 0;
+    margin: 10px auto;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #f9f9f9;
-    cursor: pointer;
-  }
-
-  #startButton {
-    display: block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: #fff;
     cursor: pointer;
   }
   
@@ -53,9 +48,20 @@ body {
     font-weight: bold;
   }
   
-  #nextButton {
+  #nextButton,
+  #resetButton {
     display: none;
     margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  #startButton {
+    margin-top: 10px;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
