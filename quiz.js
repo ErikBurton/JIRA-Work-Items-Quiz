@@ -48,6 +48,16 @@ const questions = [
   
   function checkAnswer(selectedOption) {
     const currentQuestion = questions[currentQuestionIndex];
+    const optionButtons = document.querySelectorAll('.option');
+    optionButtons.forEach(button => {
+      button.disabled = true; // disable all options after an answer is chosen
+      if (button.textContent === currentQuestion.answer) {
+        button.classList.add('correct-answer'); // add class to correct answer
+      } else if (button.textContent === selectedOption) {
+        button.classList.add('wrong-answer'); // add class to wrong answer
+      }
+    });
+    
     if (selectedOption === currentQuestion.answer) {
       score += 10;
       resultElement.textContent = "Correct!";
@@ -55,15 +65,7 @@ const questions = [
       resultElement.textContent = "Wrong! The correct answer is: " + currentQuestion.answer;
     }
     scoreElement.textContent = "Score: " + score;
-    disableOptions();
     nextButton.style.display = 'block';
-  }
-  
-  function disableOptions() {
-    const optionButtons = document.querySelectorAll('.option');
-    optionButtons.forEach(button => {
-      button.disabled = true;
-    });
   }
   
   function nextQuestion() {
@@ -135,4 +137,3 @@ const questions = [
   
   startButton.addEventListener('click', startQuiz);
   nextButton.addEventListener('click', nextQuestion);
-  
