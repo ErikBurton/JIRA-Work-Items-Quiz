@@ -4,25 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Work Item Management Quiz</title>
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+    h1 {
+      font-size: 36px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: #fff;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <h1>JIRA Work Item Management Quiz</h1>
-    <div id="quiz">
-      <input type="text" id="userNameInput" placeholder="Enter your name">
-      <button id="startButton">Start Quiz</button>
-      <p id="question"></p>
-      <div id="options"></div>
-      <p id="result"></p>
-      <p id="score"></p>
-      <button id="nextButton">Next Question</button>
-      <button id="resetButton" onclick="resetQuiz()">Start Over</button>
-      <p id="highestScore">Highest Score: 0</p>
-      <ul id="topScores"></ul>
-    </div>
-  </div>
+  <h1>Welcome to the JIRA Work Item Management Quiz</h1>
+  <p>Are you ready to test your knowledge?</p>
+  <button onclick="startGame()">Start Game</button>
 
-  <script src="quiz.js"></script>
+  <script>
+    function startGame() {
+      window.location.href = "quiz.html";
+    }
+  </script>
 </body>
 </html>
